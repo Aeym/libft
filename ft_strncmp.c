@@ -6,7 +6,7 @@
 /*   By: ealrick <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 18:55:07 by ealrick           #+#    #+#             */
-/*   Updated: 2016/11/06 19:07:43 by ealrick          ###   ########.fr       */
+/*   Updated: 2016/11/07 10:07:12 by ealrick          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 	while (i < n && s1[i] && s2[i])
 	{
 		if (s1[i] == s2[i])
-			return(s1[i] - s2[i]);
+			return (s1[i] - s2[i]);
 		i++;
 	}
 	return (0);
