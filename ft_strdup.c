@@ -6,23 +6,11 @@
 /*   By: ealrick <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 13:19:20 by ealrick           #+#    #+#             */
-/*   Updated: 2016/11/05 16:26:11 by ealrick          ###   ########.fr       */
+/*   Updated: 2016/11/07 10:36:41 by ealrick          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-int		ft_strlen(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-	{
-		i++;
-	}
-	return (i);
-}
+#include "libft.h"
 
 char	*ft_strdup(char *src)
 {

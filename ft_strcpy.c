@@ -6,9 +6,11 @@
 /*   By: ealrick <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 16:21:38 by ealrick           #+#    #+#             */
-/*   Updated: 2016/11/06 16:27:15 by ealrick          ###   ########.fr       */
+/*   Updated: 2016/11/07 10:36:30 by ealrick          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strcpy(char *dst, const char *src)
 {
