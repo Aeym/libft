@@ -1,35 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ealrick <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 18:41:28 by ealrick           #+#    #+#             */
-/*   Updated: 2016/11/10 14:23:22 by ealrick          ###   ########.fr       */
+/*   Created: 2016/11/10 15:07:41 by ealrick           #+#    #+#             */
+/*   Updated: 2016/11/10 15:27:35 by ealrick          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
-	int		j;
+	unsigned char	tmp[n];
 
-	i = 0;
-	if (little[0] == '\0')
-		return (big);
-	while (i < len)
-	{
-		j = 0;
-		while (little[j] == big[i + j])
-		{
-			if (little[j + 1] == '\0')
-				return (big + i);
-			j++;
-		}
-		i++;
-	}
-	return (NULL);
+	ft_memcpy(tmp, src, n);
+	ft_memcpy(dst, tmp, n);
+	return (dst);
 }
