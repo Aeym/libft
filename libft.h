@@ -6,7 +6,7 @@
 /*   By: ealrick <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 10:25:57 by ealrick           #+#    #+#             */
-/*   Updated: 2016/11/11 10:38:06 by ealrick          ###   ########.fr       */
+/*   Updated: 2016/11/11 15:07:20 by ealrick          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,13 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		ft_isprint(int c);
 void	ft_putnbr(int n);
+void	ft_putnbr_fd(int n, int fd);
 void	ft_putchar(char c);
+void	ft_putchar_fd(char c, int fd);
 void	ft_putstr(char const *s);
+void	ft_putstr_fd(char const *s, int fd);
+void	ft_putendl(char const *s);
+void	ft_putendl_fd(char const *s, int fd);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strcpy(char *dst, const char *src);
