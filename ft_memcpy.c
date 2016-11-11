@@ -6,7 +6,7 @@
 /*   By: ealrick <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 14:26:23 by ealrick           #+#    #+#             */
-/*   Updated: 2016/11/10 16:28:20 by ealrick          ###   ########.fr       */
+/*   Updated: 2016/11/11 10:30:20 by ealrick          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,16 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t i;
+	size_t	i;
+	char	*str1;
+	char	*str2;
 
 	i = 0;
+	str1 = (char *)dst;
+	str2 = (char *)src;
 	while (i < n)
 	{
-		dst[i] = src[i];
+		str1[i] = str2[i];
 		i++;
 	}
 	return (dst);

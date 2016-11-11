@@ -6,30 +6,24 @@
 /*   By: ealrick <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 18:41:28 by ealrick           #+#    #+#             */
-/*   Updated: 2016/11/10 14:23:22 by ealrick          ###   ########.fr       */
+/*   Updated: 2016/11/11 11:43:00 by ealrick          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(char *big, char *little, size_t len)
 {
-	size_t	i;
-	int		j;
+	size_t	len2;
 
-	i = 0;
-	if (little[0] == '\0')
+	if (!*little)
 		return (big);
-	while (i < len)
+	len2 = ft_strlen((char*)little);
+	while (*big && (len-- >= len2))
 	{
-		j = 0;
-		while (little[j] == big[i + j])
-		{
-			if (little[j + 1] == '\0')
-				return (big + i);
-			j++;
-		}
-		i++;
+		if (*big == *little && ft_memcmp(big, little, len2) == 0)
+			return ((char*)big);
+		big++;
 	}
 	return (NULL);
 }

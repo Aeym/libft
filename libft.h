@@ -6,7 +6,7 @@
 /*   By: ealrick <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 10:25:57 by ealrick           #+#    #+#             */
-/*   Updated: 2016/11/10 21:33:40 by ealrick          ###   ########.fr       */
+/*   Updated: 2016/11/11 10:38:06 by ealrick          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,14 @@ char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t len);
 char	*ft_strdup(char *src);
 int		ft_strlen(const char *str);
-char	*ft_strstr(const char *big, const char *little);
-char	*ft_strnstr(const char *big, const char *little, size_t len);
+char	*ft_strstr(char *big, char *little);
+char	*ft_strnstr(char *big, char *little, size_t len);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
-void	*ft_memchr(const void *s, int c, size_t n);
-int		ft_memcmp(const void *s1, const void *s2, size_t n);
+void	*ft_memchr(void *s, int c, size_t n);
+int		ft_memcmp(void *s1, void *s2, size_t n);
 
 #endif
