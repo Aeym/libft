@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ealrick <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 15:07:41 by ealrick           #+#    #+#             */
-/*   Updated: 2016/11/13 14:53:23 by ealrick          ###   ########.fr       */
+/*   Created: 2016/11/13 16:21:03 by ealrick           #+#    #+#             */
+/*   Updated: 2016/11/13 16:44:58 by ealrick          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int		ft_atoi(const char *str)
 {
-	char	*src1;
-	char	*dst1;
-	size_t	i;
+	int i;
+	int nb;
+	int neg;
 
-	i = -1;
-	src1 = (char *)src;
-	dst1 = (char *)dst;
-	if (src1 < dst1)
-		while ((int)--len >= 0)
-			*(dst1 + len) = *(src1 + len);
-	else
-		while (++i < len)
-			*(dst1 + i) = *(src1 + i);
-	return (dst);
+	i = 0;
+	nb = 0;
+	neg = 0;
+	while ((str[i] >= 8 && str[i] <= 14) || str[i] == 32 || str[i] == '+')
+		i++;
+	if (str[i] == '-')
+	{
+		neg = 1;
+		i++;
+	}
+	while (str[i] > 47 && str[i] < 58)
+	{
+		nb = nb * 10 + (str[i] - 48);
+		i++;
+	}
+	if (neg == 1)
+		nb *= -1;
+	return (nb);
 }

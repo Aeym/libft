@@ -6,7 +6,7 @@
 /*   By: ealrick <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 10:25:57 by ealrick           #+#    #+#             */
-/*   Updated: 2016/11/11 16:03:57 by ealrick          ###   ########.fr       */
+/*   Updated: 2016/11/13 16:36:10 by ealrick          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,13 @@ char	*ft_strncpy(char *dst, const char *src, size_t len);
 char	*ft_strdup(char *src);
 char	*ft_strcat(char *s1, const char *s2);
 char	*ft_strncat(char *s1, const char *s2, size_t n);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 int		ft_strlen(const char *str);
 char	*ft_strstr(char *big, char *little);
 char	*ft_strnstr(char *big, char *little, size_t len);
+char	*ft_strchr(const char *s, char c);
+char	*ft_strrchr(const char *s, char c);
+int		ft_atoi(const char *str);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
