@@ -53,6 +53,7 @@ char	*ft_strcat(char *s1, const char *s2);
 char	*ft_strncat(char *s1, const char *s2, size_t n);
 char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_itoa(int n);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 int		ft_strlen(const char *str);
 char	*ft_strstr(char *big, char *little);
