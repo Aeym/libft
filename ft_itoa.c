@@ -16,6 +16,8 @@ char    *ft_itoa(int n)
     tmp =  n;
     if (n == -2147483648)
         return (ft_strdup("-2147483648"));
+    if (n == 0)
+        return (ft_strdup("0"));
     while (tmp /= 10)
         ++i;
     if (n < 0)
