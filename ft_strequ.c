@@ -6,7 +6,7 @@
 /*   By: ealrick <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/14 14:41:05 by ealrick           #+#    #+#             */
-/*   Updated: 2016/11/14 14:42:55 by ealrick          ###   ########.fr       */
+/*   Updated: 2016/11/22 16:29:31 by ealrick          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,13 @@ int		ft_strequ(char const *s1, char const *s2)
 	int i;
 
 	i = 0;
-	while (s1[i] && s2[i])
+	if (!s1 || !s2)
+		return (0);
+	while (s1[i] || s2[i])
 	{
 		if (s1[i] != s2[i])
 			return (0);
+		i++;
 	}
 	return (1);
 }

@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_ispunct.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ealrick <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/14 14:44:19 by ealrick           #+#    #+#             */
-/*   Updated: 2016/11/22 16:37:45 by ealrick          ###   ########.fr       */
+/*   Created: 2016/11/22 16:56:27 by ealrick           #+#    #+#             */
+/*   Updated: 2016/11/22 17:01:29 by ealrick          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strnequ(char const *s1, char const *s2, size_t n)
+int		ft_ispunct(int c)
 {
-	size_t i;
-
-	i = 0;
-	if (!s1 || !s2)
-		return (0);
-	while ((s1[i] || s2[i]) && i < n)
-	{
-		if (s1[i] != s2[i])
-			return (0);
-		i++;
-	}
-	return (1);
+	if ((c > 32 && c < 48) || (c > 57 && c < 65) || (c > 90 && c < 97) ||
+			(c > 122 && c < 127))
+		return (1);
+	return (0);
 }

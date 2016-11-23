@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_iscntrl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ealrick <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/14 14:44:19 by ealrick           #+#    #+#             */
-/*   Updated: 2016/11/22 16:37:45 by ealrick          ###   ########.fr       */
+/*   Created: 2016/11/22 16:52:51 by ealrick           #+#    #+#             */
+/*   Updated: 2016/11/22 16:55:56 by ealrick          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strnequ(char const *s1, char const *s2, size_t n)
+int		ft_iscntrl(int c)
 {
-	size_t i;
-
-	i = 0;
-	if (!s1 || !s2)
-		return (0);
-	while ((s1[i] || s2[i]) && i < n)
-	{
-		if (s1[i] != s2[i])
-			return (0);
-		i++;
-	}
-	return (1);
+	if ((c >= 0 && c <= 31) || c == 127)
+		return (1);
+	return (0);
 }
