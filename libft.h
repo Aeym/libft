@@ -6,7 +6,7 @@
 /*   By: ealrick <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 10:25:57 by ealrick           #+#    #+#             */
-/*   Updated: 2016/11/22 17:03:01 by ealrick          ###   ########.fr       */
+/*   Updated: 2016/11/23 18:43:41 by ealrick          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void				ft_bzero(void *s, size_t n);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void				*ft_memmove(void *dst, const void *src, size_t len);
-void				*ft_memchr(void *s, int c, size_t n);
+void				*ft_memchr(const void *s, int c, size_t n);
 char				*ft_itoa(int n);
 int					ft_memcmp(void *s1, void *s2, size_t n);
 t_list				*ft_lstnew(void const *content, size_t content_size);
